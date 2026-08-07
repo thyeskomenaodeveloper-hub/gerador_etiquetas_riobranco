@@ -27,16 +27,30 @@ body {
 
 .header {
     background-color: var(--card-bg);
-    padding: 2rem;
-    text-align: center;
+    padding: 1.5rem 2rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    max-height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
 .header h1 {
     color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
 }
 
 .header p {
@@ -76,9 +90,60 @@ body {
 }
 
 label {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.bipador-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #15803d;
+    background: #dcfce7;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid #bbf7d0;
+}
+
+.badge-optional {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #4f46e5;
+    background: #e0e7ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid #c7d2fe;
+}
+
+.logo-upload-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-sm-danger {
+    padding: 0.5rem 0.8rem;
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-sm-danger:hover {
+    background: var(--danger-hover);
+}
+
+.help-text {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
 }
 
@@ -196,17 +261,27 @@ input:focus, textarea:focus {
 }
 
 .label-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     font-size: 0.55rem;
     color: var(--text-secondary);
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     line-height: 1;
     margin-bottom: 2px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.label-header-logo {
+    max-height: 16px;
+    max-width: 40px;
+    object-fit: contain;
 }
 
 .label-title {
