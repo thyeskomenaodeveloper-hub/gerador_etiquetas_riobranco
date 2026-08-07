@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio Branco Festas e Embalagens - Etiquetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Rio Branco Festas e Embalagens</h1>
+        <p>Gerador de Etiquetas de Precificação</p>
+    </header>
+
+    <main class="container">
+        <section class="form-section no-print">
+            <div class="card">
+                <h2>Nova Etiqueta</h2>
+                <form id="labelForm">
+                    <div class="form-group">
+                        <label for="productName">Nome do Produto</label>
+                        <input type="text" id="productName" placeholder="Ex: Caixa de Papelão 20x20x20" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Descrição / Detalhes</label>
+                        <textarea id="productDescription" rows="2" placeholder="Ex: Pacote com 50 unidades"></textarea>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col">
+                            <label for="productPrice">Valor (R$)</label>
+                            <input type="number" id="productPrice" step="0.01" placeholder="Ex: 25.90" required>
+                        </div>
+                        <div class="col">
+                            <label for="productBarcode">Código de Barras</label>
+                            <input type="text" id="productBarcode" placeholder="Ex: 7891234567890" required>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="btn btn-primary">Adicionar Etiqueta</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.print()">Imprimir
+                            Etiquetas</button>
+                        <button type="button" class="btn btn-danger" id="clearBtn">Limpar Tudo</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="labels-section">
+            <div class="labels-grid" id="labelsGrid">
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
